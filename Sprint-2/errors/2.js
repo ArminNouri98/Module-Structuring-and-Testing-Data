@@ -5,7 +5,7 @@
 
 // function square(3) {
     function square(num) {///input never can be number like that.
-    return num * num;
+    return Math.pow(num,2);
 }
 
-
+console.log(square(3));

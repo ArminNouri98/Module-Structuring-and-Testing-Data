@@ -4,8 +4,12 @@
 // interpret the error message and figure out why an error is occurring
 
 function capitalise(str) {
-  // let str = `${str[0].toUpperCase()}${str.slice(1)}`;
-  let capitalisedStr = `${str[0].toUpperCase()}${str.slice(1)}`;
-  // return str;
-  return capitalisedStr;
+  if (typeof str !== "string" || str.length === 0) {
+    return str; // Return the input unchanged if it's not a string or empty
+  }
+  return `${str[0].toUpperCase()}${str.slice(1)}`;
 }
+console.log(capitalise("hello"));  // Output: "Hello"
+console.log(capitalise(""));       // Output: ""
+console.log(capitalise(null));     // Output: null
+console.log(capitalise(42));       // Output: 42
